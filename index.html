@@ -174,6 +174,9 @@ main{
 
 /* ── CERTIFICATIONS ────────────────────────── */
 #pg-certs{background:var(--navy-2)}
+.cr-h{font-family:var(--font-m);font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin:34px 0 12px}
+.cr-h:first-of-type{margin-top:8px}
+@media(max-width:700px){#pg-creds .c-row{grid-template-columns:1fr}#pg-creds .c-yr{padding:10px 18px;border-right:none;border-bottom:2px solid var(--gold)}#pg-creds .c-body{padding:14px 18px;align-items:flex-start}#pg-creds .c-st{display:none}#pg-creds a.c-st{display:inline-block;margin-left:0;margin-top:8px}#pg-creds .c-body>div:nth-child(2){flex:1}}
 .cert-tl{display:grid;gap:2px;margin-top:0}
 .c-row{display:grid;grid-template-columns:130px 1fr;background:var(--navy-3);overflow:hidden;transition:background 0.2s}
 .c-row:hover{background:var(--navy-4)}
@@ -272,7 +275,7 @@ main{
     <li><a onclick="go('expertise')" data-p="expertise">Expertise</a></li>
     <li><a onclick="go('miles')" data-p="miles">Milestones</a></li>
     <li><a onclick="go('certs')" data-p="certs">Certifications</a></li>
-    <li><a onclick="go('contact');setTimeout(function(){document.getElementById('credentials').scrollIntoView({behavior:'smooth'});},300);" style="cursor:pointer" data-p="credentials">Credentials</a></li>
+    <li><a onclick="go('creds')" data-p="creds">Credentials</a></li>
     <li><a onclick="go('contact')" data-p="contact">Contact</a></li>
   </ul>
   <div style="display:flex;gap:10px;align-items:center">
@@ -401,6 +404,31 @@ main{
 
 
 <!-- CONTACT -->
+<div class="page" id="pg-creds">
+<div class="page-inner">
+  <div class="lbl">Credentials</div>
+  <h2 class="ttl">Credentials <em>&amp; Recognition</em></h2>
+  <div class="cr-h">🏆 Awards</div>
+  <div class="cert-tl">
+    <div class="c-row done"><div class="c-yr">2014–16</div><div class="c-body"><div class="c-badge">★</div><div><div class="c-nm">Two Certificates of Appreciation</div><div class="c-org">Bharti Airtel · Open-Item Resolution · VAS Partner Reconciliation</div></div><div class="c-st">Award</div></div></div>
+    <div class="c-row done"><div class="c-yr">2012–13</div><div class="c-body"><div class="c-badge">★</div><div><div class="c-nm">Best Performer — Finance, Delhi Zone</div><div class="c-org">Bajaj Allianz General Insurance</div></div><div class="c-st">Award</div></div></div>
+    <div class="c-row done"><div class="c-yr">2012</div><div class="c-body"><div class="c-badge">★</div><div><div class="c-nm">Certificate of Excellence — Finance, National Level</div><div class="c-org">Bajaj Allianz General Insurance</div></div><div class="c-st">Award</div></div></div>
+  </div>
+  <div class="cr-h">🎓 Education</div>
+  <div class="cert-tl">
+    <div class="c-row done"><div class="c-yr">2008</div><div class="c-body"><div class="c-badge">✓</div><div><div class="c-nm">PGDFM — Post Graduate Diploma in Financial Management</div><div class="c-org">IMT Ghaziabad</div></div><div class="c-st">Finance</div></div></div>
+    <div class="c-row done"><div class="c-yr">2005</div><div class="c-body"><div class="c-badge">✓</div><div><div class="c-nm">MBA — Marketing</div><div class="c-org">Vaishali Institute of Business &amp; Rural Management</div></div><div class="c-st">Marketing</div></div></div>
+    <div class="c-row done"><div class="c-yr">2003</div><div class="c-body"><div class="c-badge">✓</div><div><div class="c-nm">B.Com — Bachelor of Commerce</div><div class="c-org">Lalit Narayan Mithila University</div></div><div class="c-st">Commerce</div></div></div>
+  </div>
+  <div class="cr-h">📜 Certifications</div>
+  <div class="cert-tl">
+    <div class="c-row done"><div class="c-yr">2026</div><div class="c-body"><div class="c-badge">✓</div><div><div class="c-nm">AML, KYC &amp; IFRS — Banking &amp; Insurance</div><div class="c-org">LinkedIn Learning</div></div><a class="c-st" href="./Faiz_Abdullah_LinkedIn_AML_KYC.pdf" target="_blank" rel="noopener" style="text-decoration:none">View ↗</a></div></div>
+    <div class="c-row done"><div class="c-yr">2026</div><div class="c-body"><div class="c-badge">✓</div><div><div class="c-nm">Risk Management Foundations</div><div class="c-org">LinkedIn Learning</div></div><a class="c-st" href="./Faiz_Abdullah_LinkedIn_Risk_Management.pdf" target="_blank" rel="noopener" style="text-decoration:none">View ↗</a></div></div>
+    <div class="c-row done"><div class="c-yr">2010</div><div class="c-body"><div class="c-badge">✓</div><div><div class="c-nm">I-Quest — Basic General Insurance Products</div><div class="c-org">Bajaj Allianz General Insurance</div></div><div class="c-st">Certified</div></div></div>
+  </div>
+</div>
+</div>
+
 <div class="page" id="pg-contact">
 <div class="page-inner">
   <div class="con-g">
@@ -428,127 +456,7 @@ main{
 
 
 
-<!-- CREDENTIALS SECTION -->
-<section id="credentials" style="background:#0a0a14;padding:60px 0;border-top:1px solid rgba(201,168,76,0.15)">
-  <div style="max-width:1100px;margin:0 auto;padding:0 24px">
 
-    <!-- Section Header -->
-    <div style="text-align:center;margin-bottom:48px">
-      <div style="font-family:'Cormorant Garamond',serif;font-size:0.65rem;color:rgba(201,168,76,0.7);letter-spacing:0.25em;text-transform:uppercase;margin-bottom:10px">Qualifications</div>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:#e8e0d0;font-weight:400;margin-bottom:8px">Credentials & Recognition</h2>
-      <div style="width:48px;height:1px;background:linear-gradient(90deg,transparent,#C9A84C,transparent);margin:0 auto"></div>
-    </div>
-
-    <!-- CERTIFICATIONS -->
-    <div style="margin-bottom:44px">
-      <div style="font-family:'Cormorant Garamond',serif;font-size:0.6rem;color:rgba(201,168,76,0.6);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid rgba(201,168,76,0.15)">Certifications</div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px">
-
-
-
-        <a href="./Faiz_Abdullah_LinkedIn_Risk_Management.pdf" target="_blank" style="background:#0f1120;border:1px solid rgba(201,168,76,0.25);padding:18px 20px;text-decoration:none;display:flex;align-items:center;gap:14px;transition:all 0.2s;border-radius:2px" onmouseover="this.style.borderColor='rgba(201,168,76,0.7)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.25)'">
-          <div style="font-size:1.8rem;flex-shrink:0">📜</div>
-          <div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:#e8e0d0;font-weight:600;margin-bottom:2px">Risk Management Foundations</div>
-            <div style="font-size:0.7rem;color:rgba(201,168,76,0.7);letter-spacing:0.05em">LinkedIn Learning · May 2026</div>
-            <div style="font-size:0.65rem;color:#666;margin-top:2px">⬇ Download Certificate</div>
-          </div>
-        </a>
-
-        <a href="./Faiz_Abdullah_LinkedIn_AML_KYC.pdf" target="_blank" style="background:#0f1120;border:1px solid rgba(201,168,76,0.25);padding:18px 20px;text-decoration:none;display:flex;align-items:center;gap:14px;transition:all 0.2s;border-radius:2px" onmouseover="this.style.borderColor='rgba(201,168,76,0.7)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.25)'">
-          <div style="font-size:1.8rem;flex-shrink:0">📜</div>
-          <div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:#e8e0d0;font-weight:600;margin-bottom:2px">AML · KYC · IFRS — Banking & Insurance</div>
-            <div style="font-size:0.7rem;color:rgba(201,168,76,0.7);letter-spacing:0.05em">LinkedIn Learning · May 2026</div>
-            <div style="font-size:0.65rem;color:#666;margin-top:2px">⬇ Download Certificate</div>
-          </div>
-        </a>
-        <div style="background:#0f1120;border:1px solid rgba(201,168,76,0.25);padding:18px 20px;display:flex;align-items:center;gap:14px;border-radius:2px">
-          <div style="font-size:1.8rem;flex-shrink:0">📜</div>
-          <div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:#e8e0d0;font-weight:600;margin-bottom:2px">I-Quest Certified — Basic General Insurance Products</div>
-            <div style="font-size:0.7rem;color:rgba(201,168,76,0.7);letter-spacing:0.05em">Bajaj Allianz GIC · 2010</div>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-
-    <!-- AWARDS -->
-    <div style="margin-bottom:44px">
-      <div style="font-family:'Cormorant Garamond',serif;font-size:0.6rem;color:rgba(201,168,76,0.6);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid rgba(201,168,76,0.15)">Awards & Recognition</div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px">
-
-        <div style="background:#0f1120;border:1px solid rgba(201,168,76,0.25);padding:18px 20px;display:flex;align-items:center;gap:14px;border-radius:2px">
-          <div style="font-size:1.8rem;flex-shrink:0">🏆</div>
-          <div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:#e8e0d0;font-weight:600;margin-bottom:2px">Certificate of Excellence — Finance</div>
-            <div style="font-size:0.7rem;color:rgba(201,168,76,0.7);letter-spacing:0.05em">Bajaj Allianz GIC · National Level · 2012</div>
-          </div>
-        </div>
-
-        <div style="background:#0f1120;border:1px solid rgba(201,168,76,0.25);padding:18px 20px;display:flex;align-items:center;gap:14px;border-radius:2px">
-          <div style="font-size:1.8rem;flex-shrink:0">🏆</div>
-          <div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:#e8e0d0;font-weight:600;margin-bottom:2px">Best Performer — Finance Delhi Zone</div>
-            <div style="font-size:0.7rem;color:rgba(201,168,76,0.7);letter-spacing:0.05em">Bajaj Allianz GIC · Q1 FY 2012-13</div>
-          </div>
-        </div>
-
-        <div style="background:#0f1120;border:1px solid rgba(201,168,76,0.25);padding:18px 20px;display:flex;align-items:center;gap:14px;border-radius:2px">
-          <div style="font-size:1.8rem;flex-shrink:0">🏆</div>
-          <div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:#e8e0d0;font-weight:600;margin-bottom:2px">Certificate of Appreciation — Open Item Resolution</div>
-            <div style="font-size:0.7rem;color:rgba(201,168,76,0.7);letter-spacing:0.05em">Bharti Airtel Limited · 2015-16</div>
-          </div>
-        </div>
-
-        <div style="background:#0f1120;border:1px solid rgba(201,168,76,0.25);padding:18px 20px;display:flex;align-items:center;gap:14px;border-radius:2px">
-          <div style="font-size:1.8rem;flex-shrink:0">🏆</div>
-          <div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:#e8e0d0;font-weight:600;margin-bottom:2px">Certificate of Appreciation — VAS Partner Reconciliation</div>
-            <div style="font-size:0.7rem;color:rgba(201,168,76,0.7);letter-spacing:0.05em">Bharti Airtel Limited · 2014-15</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- EDUCATION -->
-    <div>
-      <div style="font-family:'Cormorant Garamond',serif;font-size:0.6rem;color:rgba(201,168,76,0.6);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid rgba(201,168,76,0.15)">Education</div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px">
-
-        <div style="background:#0f1120;border:1px solid rgba(201,168,76,0.25);padding:18px 20px;text-decoration:none;display:flex;align-items:center;gap:14px;transition:all 0.2s;border-radius:2px" onmouseover="this.style.borderColor='rgba(201,168,76,0.7)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.25)'">
-          <div style="font-size:1.8rem;flex-shrink:0">🎓</div>
-          <div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:#e8e0d0;font-weight:600;margin-bottom:2px">PGDFM — Financial Management</div>
-            <div style="font-size:0.7rem;color:rgba(201,168,76,0.7);letter-spacing:0.05em">IMT Ghaziabad · AICTE Approved · 2008</div>
-          </div>
-        </div>
-
-        <div style="background:#0f1120;border:1px solid rgba(201,168,76,0.25);padding:18px 20px;text-decoration:none;display:flex;align-items:center;gap:14px;transition:all 0.2s;border-radius:2px" onmouseover="this.style.borderColor='rgba(201,168,76,0.7)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.25)'">
-          <div style="font-size:1.8rem;flex-shrink:0">🎓</div>
-          <div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:#e8e0d0;font-weight:600;margin-bottom:2px">MBA — Marketing</div>
-            <div style="font-size:0.7rem;color:rgba(201,168,76,0.7);letter-spacing:0.05em">Vaishali Institute · First Class · 2005</div>
-          </div>
-        </div>
-
-        <div style="background:#0f1120;border:1px solid rgba(201,168,76,0.25);padding:18px 20px;text-decoration:none;display:flex;align-items:center;gap:14px;transition:all 0.2s;border-radius:2px" onmouseover="this.style.borderColor='rgba(201,168,76,0.7)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.25)'">
-          <div style="font-size:1.8rem;flex-shrink:0">🎓</div>
-          <div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:#e8e0d0;font-weight:600;margin-bottom:2px">B.Com — Commerce</div>
-            <div style="font-size:0.7rem;color:rgba(201,168,76,0.7);letter-spacing:0.05em">LNMU · First Class · 2003</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
 
 </div>
 
@@ -568,6 +476,7 @@ main{
   <div class="dot" onclick="go('expertise')" data-tip="Expertise"></div>
   <div class="dot" onclick="go('miles')" data-tip="Milestones"></div>
   <div class="dot" onclick="go('certs')" data-tip="Certifications"></div>
+  <div class="dot" onclick="go('creds')" data-tip="Credentials"></div>
   <div class="dot" onclick="go('contact')" data-tip="Contact"></div>
 </div>
 
@@ -584,12 +493,14 @@ main{
   <a onclick="go('expertise');document.getElementById('mob-menu').classList.remove('open')">Expertise</a>
   <a onclick="go('miles');document.getElementById('mob-menu').classList.remove('open')">Milestones</a>
   <a onclick="go('certs');document.getElementById('mob-menu').classList.remove('open')">Certifications</a>
+  <a onclick="go('creds');document.getElementById('mob-menu').classList.remove('open')">Credentials</a>
   <a onclick="go('contact');document.getElementById('mob-menu').classList.remove('open')">Contact</a>
 </div>
 
 <script>
-const PAGES=['home','vision','story','expertise','miles','certs','contact'];
+const PAGES=['home','vision','story','expertise','miles','certs','creds','contact'];
 const TITLES={
+  creds:'Credentials — Faiz Abdullah',
   home:'Faiz Abdullah — Sales · Operations · Finance | UAE & GCC',
   vision:'Vision — Faiz Abdullah',
   story:'My Story — Faiz Abdullah',
